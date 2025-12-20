@@ -1,0 +1,223 @@
+/* ------------------------------
+   Color Palette
+--------------------------------*/
+:root {
+  --background: #FCF5EE;
+  --primary: #EE6983;
+  --soft: #FFC4C4;
+  --dark: #850E35;
+}
+
+/* ------------------------------
+   Global Styles
+--------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--dark);
+}
+
+/* ------------------------------
+   Navbar
+--------------------------------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  z-index: 1000;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar button:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   Scroll Container
+--------------------------------*/
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* ------------------------------
+   Slides
+--------------------------------*/
+.slide {
+  min-height: 100vh;
+  padding: 100px 20px 40px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ------------------------------
+   Headings & Text
+--------------------------------*/
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   Grid
+--------------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.grid img {
+  width: 100%;
+  height: 200px;        /* LINE ~97 → SAME HEIGHT */
+  object-fit: cover;   /* LINE ~98 → PREVENT STRETCH */
+  border-radius: 12px;
+  background-color: var(--soft);
+  padding: 6px;
+}
+
+
+/* ------------------------------
+   Contact Form
+--------------------------------*/
+form {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--soft);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ------------------------------
+   Responsive
+--------------------------------*/
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ------------------------------
+   Skills Section
+--------------------------------*/
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 700px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background-color: var(--soft);
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ------------------------------
+   Social Links (Contact Page)
+--------------------------------*/
+.social-links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-links p {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.social-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <button onclick="goToSlide(0)">Home</button>
+    <button onclick="goToSlide(1)">Skills</button>
+    <button onclick="goToSlide(2)">Pictures</button>
+    <button onclick="goToSlide(3)">Certificates</button>
+    <button onclick="goToSlide(4)">Contact</button>
+    <button onclick="goToSlide(5)">Footer</button>
+</nav>
+
+
+    <!-- SCROLLABLE SLIDES -->
+    <main class="scroll-container">
+
+        <!-- Slide 1 -->
+        <section class="slide">
+            <h1>Welcome to My Portfolio</h1>
+            <h2>My Introduction</h2>
+    
+            <pre><i><h3>
+                Hi! my name is Anshi Figer and I am a beginner developer
+                 and a first-year student at  
+                Fr. Conceicao Rodrigues College of Engineering,  
+                Department of Computer Engineering.  
+                This portfolio shows my learning journey.
+            </i></pre></h3>
+        </section>
+
+        <!-- Slide 2: Skills -->
+<section class="slide">
+    <h2>My Skills</h2>
+
+    <p>
+        As a beginner in computer engineering, I enjoy learning by creating
+        simple and interactive projects. Here are some tools and technologies
+        I’ve worked with so far:
+    </p>
+
+    <div class="skills-grid">
+        <div class="skill-card">Canva – Designing clickable UI/UX layouts</div>
+        <div class="skill-card">C Programming</div>
+        <div class="skill-card">C++ Programming</div>
+        <div class="skill-card">HTML – Structuring web pages</div>
+        <div class="skill-card">CSS – Styling and layouts</div>
+        <div class="skill-card">JavaScript – Adding interactivity</div>
+    
+    </div>
+</section>
+
+
+        <!-- Slide 2 -->
+        <section class="slide">
+  <h2>Pictures</h2>
+
+  <div class="grid">
+    <img src=  images/certificates/pictures/beach.png alt="Picture 1">
+    <img src=images/certificates/pictures/night.png alt="Picture 2">
+    <img src=images/certificates/pictures/painting.png alt="Picture 3">
+  </div>
+</section>
+
+
+        <!-- Slide 3 -->
+        <section class="slide">
+            <h2>Certificates</h2>
+            <div class="grid">
+                <img src=images/certificates/bitandbuild.png alt="Certificate 1">
+                <img src= images/certificates/deeplearning.png alt="Certificate 2">
+                <img src=images/certificates/linearalgebra.png alt="Certificate 3">
+                <img src=images/certificates/machinelearning.png alt=" Certificate 4">
+                <img src=images/certificates/matlabonramp.png alt="Certificate 5">
+            </div>
+        </section>
+
+        <!-- Slide 4 -->
+         <section class="slide">
+  <h2>Contact Me</h2>
+
+  <form
+    id="contact-form"
+    action=https://formspree.io/f/xjgbkqew
+    method="POST"
+  >
+    <div>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      >
+    </div>
+
+    <div>
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      >
+    </div>
+
+    <div>
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        rows="4"
+        required
+      ></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Send Message</button>
+    </div>
+  </form>
+
+  <!-- Success Message -->
+  <p id="success-message" style="display:none;">
+    ✅ Thank you! Your message has been sent.
+  </p>
+
+
+  <div class="social-links">
+  <p>You can also find me here:</p>
+
+  <a href="https://www.linkedin.com/in/anshi-figer" target="_blank">
+
+    LinkedIn
+  </a>
+
+  <a href="https://github.com/anshifiger677-alt" target="_blank">
+    GitHub
+  </a>
+
+  <a href="https://instagram.com/anshifiger" target="_blank">
+    Instagram
+  </a>
+</div>
+
+
+</section>
+
+        
+
+
+
+
+        
+
+        <!-- Slide 5 -->
+        <section class="slide">
+            <footer>
+                <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
